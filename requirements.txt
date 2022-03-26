@@ -20,8 +20,6 @@ MarkupSafe==2.0.1
 
 numpy==1.19.5
 
-pkg-resources
-
 SQLAlchemy==1.4.32
 
 typing-extensions==4.1.1
