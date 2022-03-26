@@ -1,0 +1,261 @@
+/*
+font-size:
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+font-weight:
+
+line-height:
+1.8
+
+---Spacing
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+---Colors
+#201335
+#3343a9
+
+*/
+
+/* Rubik */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Rubik, sans-serif;
+  /*background-color: #27337e;*/
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,191,164,1) 63%, rgba(0,212,255,1) 100%);
+}
+
+/* Loader */
+.loader {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader img {
+  width: 20rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Container */
+.container {
+  width: 83rem;
+
+  margin: 0 auto;
+}
+
+/* Navigation Bar */
+.navigation {
+  padding: 2.4rem;
+
+  /* background-color: #201335; */
+
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  font-size: 2rem;
+
+  list-style: none;
+
+  display: flex;
+  gap: 2.4rem;
+}
+
+.heart-icon {
+  color: #e31b23;
+}
+
+.nav-list li a:link,
+.nav-list li a:visited {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Cards */
+.cards-container {
+  margin: 1.2rem auto;
+}
+
+.card {
+  background-color: #201335;
+  box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 11px;
+  transition: all 0.3s;
+
+  overflow: hidden;
+
+  margin-bottom: 2.4rem;
+}
+
+.card:hover {
+  box-shadow: 5px 8px 8px rgba(0, 0, 0, 0.4);
+}
+
+.card-description {
+  padding: 2.4rem;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+}
+
+.card-title {
+  margin-bottom: 2.4rem;
+
+  font-size: 3rem;
+  font-family: "Cookie", cursive;
+
+  /*color: #3343a9;*/
+  color: #00d4ff;
+}
+
+.addtofavorites {
+  display: inline-block;
+  margin-bottom: 1.6rem;
+
+  font-size: 1.8rem;
+  text-decoration: none;
+  cursor: pointer;
+
+  color: #ff0000;
+}
+
+.card-text {
+  margin-bottom: 2.4rem;
+
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.text-muted {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.text-muted span {
+  text-transform: capitalize;
+}
+
+strong {
+  display: inline-block;
+  margin-right: 0.8rem;
+}
+
+/* Message Box */
+.msg-box {
+  padding: 1.6rem 2.4rem;
+
+  font-size: 2rem;
+
+  background-color: rgba(22, 25, 37, 0.7);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+
+  transition: all 0.3s;
+
+  position: fixed;
+  bottom: 25px;
+  right: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  visibility: hidden;
+}
+
+/* Animation KeyFrames */
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1864ab;
+  border-radius: 100vw;
+
+  transition: all 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0c3256;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 843px) {
+  .html {
+    font-size: 50%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .card {
+    margin: 2.4rem;
+  }
+
+  .card-text {
+    font-size: 1.6rem;
+  }
+
+  .msg-box {
+    right: 25px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .loader img {
+    width: 8rem !important;
+  }
+
+  .card-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 1.2rem;
+  }
+
+  .addtofavorites {
+    font-size: 1.8rem;
+  }
+}
